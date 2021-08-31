@@ -22,6 +22,12 @@
 		257C5CBA26DE7506006C6E6D /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C5CB526DE7506006C6E6D /* HomeBuilder.swift */; };
 		257C5CBB26DE7506006C6E6D /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C5CB626DE7506006C6E6D /* HomeInteractor.swift */; };
 		257C5CBC26DE7506006C6E6D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 257C5CB726DE7506006C6E6D /* HomeViewController.xib */; };
+		257C5CC326DE7C0B006C6E6D /* HistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C5CBE26DE7C0B006C6E6D /* HistoryRouter.swift */; };
+		257C5CC426DE7C0B006C6E6D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C5CBF26DE7C0B006C6E6D /* HistoryViewController.swift */; };
+		257C5CC526DE7C0B006C6E6D /* HistoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C5CC026DE7C0B006C6E6D /* HistoryBuilder.swift */; };
+		257C5CC626DE7C0B006C6E6D /* HistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C5CC126DE7C0B006C6E6D /* HistoryInteractor.swift */; };
+		257C5CC726DE7C0B006C6E6D /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 257C5CC226DE7C0B006C6E6D /* HistoryViewController.xib */; };
+		257C5CC926DE85CE006C6E6D /* HomeComponent+History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C5CC826DE85CE006C6E6D /* HomeComponent+History.swift */; };
 		EDF74C375FE4AD0310D2D404 /* Pods_TryHardRIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418326963AE70D8BB9AAD611 /* Pods_TryHardRIBs.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +49,12 @@
 		257C5CB526DE7506006C6E6D /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
 		257C5CB626DE7506006C6E6D /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		257C5CB726DE7506006C6E6D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		257C5CBE26DE7C0B006C6E6D /* HistoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRouter.swift; sourceTree = "<group>"; };
+		257C5CBF26DE7C0B006C6E6D /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		257C5CC026DE7C0B006C6E6D /* HistoryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryBuilder.swift; sourceTree = "<group>"; };
+		257C5CC126DE7C0B006C6E6D /* HistoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryInteractor.swift; sourceTree = "<group>"; };
+		257C5CC226DE7C0B006C6E6D /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
+		257C5CC826DE85CE006C6E6D /* HomeComponent+History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeComponent+History.swift"; sourceTree = "<group>"; };
 		418326963AE70D8BB9AAD611 /* Pods_TryHardRIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TryHardRIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E2FD797DE5144BDEB937D89 /* Pods-TryHardRIBs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TryHardRIBs.release.xcconfig"; path = "Target Support Files/Pods-TryHardRIBs/Pods-TryHardRIBs.release.xcconfig"; sourceTree = "<group>"; };
 		FBD7BB5AF17E7744E4716495 /* Pods-TryHardRIBs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TryHardRIBs.debug.xcconfig"; path = "Target Support Files/Pods-TryHardRIBs/Pods-TryHardRIBs.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +96,7 @@
 				257C5CA626DE70A8006C6E6D /* App */,
 				257C5CA926DE7267006C6E6D /* Root */,
 				257C5CB226DE74DF006C6E6D /* Home */,
+				257C5CBD26DE7BF3006C6E6D /* History */,
 			);
 			path = TryHardRIBs;
 			sourceTree = "<group>";
@@ -121,8 +134,21 @@
 				257C5CB526DE7506006C6E6D /* HomeBuilder.swift */,
 				257C5CB626DE7506006C6E6D /* HomeInteractor.swift */,
 				257C5CB726DE7506006C6E6D /* HomeViewController.xib */,
+				257C5CC826DE85CE006C6E6D /* HomeComponent+History.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		257C5CBD26DE7BF3006C6E6D /* History */ = {
+			isa = PBXGroup;
+			children = (
+				257C5CBE26DE7C0B006C6E6D /* HistoryRouter.swift */,
+				257C5CBF26DE7C0B006C6E6D /* HistoryViewController.swift */,
+				257C5CC026DE7C0B006C6E6D /* HistoryBuilder.swift */,
+				257C5CC126DE7C0B006C6E6D /* HistoryInteractor.swift */,
+				257C5CC226DE7C0B006C6E6D /* HistoryViewController.xib */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		4A5735402841A90DEC7FC691 /* Pods */ = {
@@ -204,6 +230,7 @@
 				257C5C9F26DE6F50006C6E6D /* LaunchScreen.storyboard in Resources */,
 				257C5C9C26DE6F50006C6E6D /* Assets.xcassets in Resources */,
 				257C5C9A26DE6F4E006C6E6D /* Main.storyboard in Resources */,
+				257C5CC726DE7C0B006C6E6D /* HistoryViewController.xib in Resources */,
 				257C5CBC26DE7506006C6E6D /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,17 +284,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				257C5CC526DE7C0B006C6E6D /* HistoryBuilder.swift in Sources */,
 				257C5CAF26DE72D5006C6E6D /* RootViewController.swift in Sources */,
+				257C5CC326DE7C0B006C6E6D /* HistoryRouter.swift in Sources */,
 				257C5CBB26DE7506006C6E6D /* HomeInteractor.swift in Sources */,
 				257C5CAE26DE72D5006C6E6D /* RootRouter.swift in Sources */,
+				257C5CC426DE7C0B006C6E6D /* HistoryViewController.swift in Sources */,
 				257C5CBA26DE7506006C6E6D /* HomeBuilder.swift in Sources */,
 				257C5CB126DE72D5006C6E6D /* RootInteractor.swift in Sources */,
 				257C5C9726DE6F4E006C6E6D /* ViewController.swift in Sources */,
 				257C5C9326DE6F4E006C6E6D /* AppDelegate.swift in Sources */,
 				257C5CB926DE7506006C6E6D /* HomeViewController.swift in Sources */,
 				257C5CB826DE7506006C6E6D /* HomeRouter.swift in Sources */,
+				257C5CC626DE7C0B006C6E6D /* HistoryInteractor.swift in Sources */,
 				257C5CA826DE70E4006C6E6D /* AppComponent.swift in Sources */,
 				257C5CB026DE72D5006C6E6D /* RootBuilder.swift in Sources */,
+				257C5CC926DE85CE006C6E6D /* HomeComponent+History.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

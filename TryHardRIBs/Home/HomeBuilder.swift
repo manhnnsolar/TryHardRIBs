@@ -33,7 +33,8 @@ final class HomeBuilder: Builder<HomeDependency>, HomeBuildable {
         let component = HomeComponent(dependency: dependency)
         let viewController = HomeViewController()
         let interactor = HomeInteractor(presenter: viewController)
+        let historyBuilder = HistoryBuilder(dependency: component)
         interactor.listener = listener
-        return HomeRouter(interactor: interactor, viewController: viewController)
+        return HomeRouter(interactor: interactor, viewController: viewController, historyBuilder: historyBuilder)
     }
 }

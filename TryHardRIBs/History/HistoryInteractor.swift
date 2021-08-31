@@ -1,5 +1,5 @@
 //
-//  HomeInteractor.swift
+//  HistoryInteractor.swift
 //  TryHardRIBs
 //
 //  Created by Manh Nguyen Ngoc on 31/08/2021.
@@ -8,29 +8,28 @@
 import RIBs
 import RxSwift
 
-protocol HomeRouting: ViewableRouting {
+protocol HistoryRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
-    func routeToHistory()
-    func dismissHistory(animated: Bool)
 }
 
-protocol HomePresentable: Presentable {
-    var listener: HomePresentableListener? { get set }
+protocol HistoryPresentable: Presentable {
+    var listener: HistoryPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol HomeListener: AnyObject {
+protocol HistoryListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func dismissHistory(animated: Bool)
 }
 
-final class HomeInteractor: PresentableInteractor<HomePresentable>, HomeInteractable {
+final class HistoryInteractor: PresentableInteractor<HistoryPresentable>, HistoryInteractable {
 
-    weak var router: HomeRouting?
-    weak var listener: HomeListener?
+    weak var router: HistoryRouting?
+    weak var listener: HistoryListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: HomePresentable) {
+    override init(presenter: HistoryPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
     }
@@ -46,16 +45,13 @@ final class HomeInteractor: PresentableInteractor<HomePresentable>, HomeInteract
     }
 }
 
-// MARK: - HomePresentableListener
-extension HomeInteractor: HomePresentableListener {
-    func routeToHistory() {
-        router?.routeToHistory()
+// MARK: - HistoryPresentableListener
+extension HistoryInteractor: HistoryPresentableListener {
+    func dismiss(animated: Bool) {
+        listener?.dismissHistory(animated: animated)
     }
-}
-
-
-extension HomeInteractor: HistoryListener {
-    func dismissHistory(animated: Bool) {
-        router?.dismissHistory(animated: animated)
+    
+    func reset() {
+        print("chua biet code j")
     }
 }
