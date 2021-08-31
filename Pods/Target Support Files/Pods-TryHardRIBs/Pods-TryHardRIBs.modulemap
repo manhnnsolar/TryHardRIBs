@@ -1,0 +1,6 @@
+framework module Pods_TryHardRIBs {
+  umbrella header "Pods-TryHardRIBs-umbrella.h"
+
+  export *
+  module * { export * }
+}

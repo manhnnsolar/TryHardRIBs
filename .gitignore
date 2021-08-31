@@ -1,0 +1,9 @@
+TryHardRIBs.xcworkspace/xcuserdata/
+TryHardRIBs.xcodeproj/xcuserdata/
+Pods/
+*.DS_Store
+build/
+fastlane/report.xml
+*.zip
+*.ipa
+*.dSYM
