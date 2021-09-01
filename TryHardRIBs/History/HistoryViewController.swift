@@ -14,7 +14,7 @@ protocol HistoryPresentableListener: AnyObject {
     // business logic, such as signIn(). This protocol is implemented by the corresponding
     // interactor class.
     func dismiss(animated: Bool)
-    func reset()
+    func resetData()
 }
 
 final class HistoryViewController: UIViewController, HistoryPresentable, HistoryViewControllable {
@@ -22,15 +22,23 @@ final class HistoryViewController: UIViewController, HistoryPresentable, History
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var pointLabel: UILabel!
     
+    var titlePlayer: String!
+    var pointPlayer: Int!
+    
     weak var listener: HistoryPresentableListener?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.config()
+    }
+    
+    func config() {
+        titleLabel.text = titlePlayer + " is winner (+_+)"
+        pointLabel.text = "Point is: \(String(describing: pointPlayer))"
     }
     
     @IBAction func resetGameDidTap(_ sender: Any) {
-        listener?.reset()
+        listener?.resetData()
     }
     
     @IBAction func backDidTap(_ sender: Any) {

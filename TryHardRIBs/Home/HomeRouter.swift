@@ -29,12 +29,13 @@ final class HomeRouter: ViewableRouter<HomeInteractable, HomeViewControllable> {
 
 // MARK: - HomeRouting
 extension HomeRouter: HomeRouting {
-    func routeToHistory() {
-        let historyRouter = historyBuilder.build(withListener: interactor)
+    func routeToHistory(playerWin: String, point: Int) {
+        let historyRouter = historyBuilder.build(withListener: interactor, playerWin: playerWin, point: point)
         attachChild(historyRouter)
         
         self.viewController.uiviewController.navigationController?.pushViewController(historyRouter.viewControllable.uiviewController, animated: true)
-        historyRooting = historyRouter
+        
+        self.historyRooting = historyRouter
     }
     
     func dismissHistory(animated: Bool) {
@@ -44,6 +45,6 @@ extension HomeRouter: HomeRouting {
         
         self.viewControllable.uiviewController.navigationController?.popViewController(animated: animated)
         detachChild(routing)
-        historyRooting = nil
+        self.historyRooting = nil
     }
 }

@@ -20,6 +20,7 @@ protocol HistoryPresentable: Presentable {
 protocol HistoryListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
     func dismissHistory(animated: Bool)
+    func resetData()
 }
 
 final class HistoryInteractor: PresentableInteractor<HistoryPresentable>, HistoryInteractable {
@@ -51,7 +52,7 @@ extension HistoryInteractor: HistoryPresentableListener {
         listener?.dismissHistory(animated: animated)
     }
     
-    func reset() {
-        print("chua biet code j")
+    func resetData() {
+        listener?.resetData()
     }
 }

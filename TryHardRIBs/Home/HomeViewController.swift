@@ -13,10 +13,10 @@ protocol HomePresentableListener: AnyObject {
     // TODO: Declare properties and methods that the view controller can invoke to perform
     // business logic, such as signIn(). This protocol is implemented by the corresponding
     // interactor class.
-    func routeToHistory()
+    func routeToHistory(playerWin: String, point: Int)
 }
 
-final class HomeViewController: UIViewController, HomePresentable, HomeViewControllable {
+final class HomeViewController: UIViewController, HomeViewControllable {
     
     @IBOutlet weak var player1: UILabel!
     @IBOutlet weak var player2: UILabel!
@@ -38,6 +38,17 @@ final class HomeViewController: UIViewController, HomePresentable, HomeViewContr
     }
     
     @IBAction func routeToHistoryDidTap(_ sender: Any) {
-        listener?.routeToHistory()
+        let playerWin = point1 < point2 ? "Player2" : "Player1"
+        listener?.routeToHistory(playerWin: playerWin, point: max(point1, point2))
+    }
+}
+
+// MARK: - HomePresentable
+extension HomeViewController: HomePresentable {
+    func resetData() {
+        point1 = 0
+        point2 = 0
+        player1.text = "\(point1)"
+        player2.text = "\(point2)"
     }
 }

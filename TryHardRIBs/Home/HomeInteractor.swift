@@ -10,12 +10,14 @@ import RxSwift
 
 protocol HomeRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
-    func routeToHistory()
+    func routeToHistory(playerWin: String, point: Int)
     func dismissHistory(animated: Bool)
+    
 }
 
 protocol HomePresentable: Presentable {
     var listener: HomePresentableListener? { get set }
+    func resetData()
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
@@ -48,13 +50,18 @@ final class HomeInteractor: PresentableInteractor<HomePresentable>, HomeInteract
 
 // MARK: - HomePresentableListener
 extension HomeInteractor: HomePresentableListener {
-    func routeToHistory() {
-        router?.routeToHistory()
+    func routeToHistory(playerWin: String, point: Int) {
+        router?.routeToHistory(playerWin: playerWin, point: point)
     }
 }
 
 
 extension HomeInteractor: HistoryListener {
+    func resetData() {
+        presenter.resetData()
+        router?.dismissHistory(animated: true)
+    }
+    
     func dismissHistory(animated: Bool) {
         router?.dismissHistory(animated: animated)
     }

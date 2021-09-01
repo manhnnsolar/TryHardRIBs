@@ -20,7 +20,7 @@ final class HistoryComponent: Component<HistoryDependency> {
 // MARK: - Builder
 
 protocol HistoryBuildable: Buildable {
-    func build(withListener listener: HistoryListener) -> HistoryRouting
+    func build(withListener listener: HistoryListener, playerWin: String, point: Int) -> HistoryRouting
 }
 
 final class HistoryBuilder: Builder<HistoryDependency>, HistoryBuildable {
@@ -29,11 +29,15 @@ final class HistoryBuilder: Builder<HistoryDependency>, HistoryBuildable {
         super.init(dependency: dependency)
     }
 
-    func build(withListener listener: HistoryListener) -> HistoryRouting {
+    func build(withListener listener: HistoryListener, playerWin: String, point: Int) -> HistoryRouting {
         let component = HistoryComponent(dependency: dependency)
         let viewController = HistoryViewController()
+        viewController.titlePlayer = playerWin
+        viewController.pointPlayer = point
+        
         let interactor = HistoryInteractor(presenter: viewController)
         interactor.listener = listener
+        
         return HistoryRouter(interactor: interactor, viewController: viewController)
     }
 }
