@@ -14,6 +14,7 @@ protocol HomePresentableListener: AnyObject {
     // business logic, such as signIn(). This protocol is implemented by the corresponding
     // interactor class.
     func routeToHistory(playerWin: String, point: Int)
+    func routeToGame(point1: Int, point2: Int)
 }
 
 final class HomeViewController: UIViewController, HomeViewControllable {
@@ -41,10 +42,22 @@ final class HomeViewController: UIViewController, HomeViewControllable {
         let playerWin = point1 < point2 ? "Player2" : "Player1"
         listener?.routeToHistory(playerWin: playerWin, point: max(point1, point2))
     }
+    
+    @IBAction func routeToGameDidTap(_ sender: Any) {
+        listener?.routeToGame(point1: point1, point2: point2)
+    }
+    
 }
 
 // MARK: - HomePresentable
 extension HomeViewController: HomePresentable {
+    func swapData(point1: Int, point2: Int) {
+        self.point1 = point1
+        self.point2 = point2
+        player1.text = "\(point1)"
+        player2.text = "\(point2)"
+    }
+    
     func resetData() {
         point1 = 0
         point2 = 0

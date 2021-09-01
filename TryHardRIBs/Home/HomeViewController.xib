@@ -56,6 +56,13 @@
                         <action selector="randomWinnerDidTap:" destination="-1" eventType="touchUpInside" id="0Bp-nv-xHQ"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kw1-Yw-rMa">
+                    <rect key="frame" x="136.5" y="517" width="102" height="30"/>
+                    <state key="normal" title="Route to Game"/>
+                    <connections>
+                        <action selector="routeToGameDidTap:" destination="-1" eventType="touchUpInside" id="ak0-1O-sNf"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -71,6 +78,8 @@
                 <constraint firstItem="ssh-9X-fRZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="100" id="ZJE-Y6-fsh"/>
                 <constraint firstItem="0R1-1V-7F1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="aYY-Wc-6hr"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="a5v-Dy-bGL" secondAttribute="bottom" constant="200" id="kNM-dD-hrA"/>
+                <constraint firstItem="kw1-Yw-rMa" firstAttribute="top" secondItem="a5v-Dy-bGL" secondAttribute="bottom" constant="50" id="q0g-CX-nMd"/>
+                <constraint firstItem="kw1-Yw-rMa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zPf-w9-raf"/>
             </constraints>
             <point key="canvasLocation" x="36" y="140"/>
         </view>

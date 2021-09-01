@@ -28,6 +28,13 @@
 		257C5CC626DE7C0B006C6E6D /* HistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C5CC126DE7C0B006C6E6D /* HistoryInteractor.swift */; };
 		257C5CC726DE7C0B006C6E6D /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 257C5CC226DE7C0B006C6E6D /* HistoryViewController.xib */; };
 		257C5CC926DE85CE006C6E6D /* HomeComponent+History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C5CC826DE85CE006C6E6D /* HomeComponent+History.swift */; };
+		257C5CCD26DF3DF1006C6E6D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C5CCC26DF3DF1006C6E6D /* Model.swift */; };
+		257C5CD426DF725F006C6E6D /* GameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C5CCF26DF725F006C6E6D /* GameRouter.swift */; };
+		257C5CD526DF725F006C6E6D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C5CD026DF725F006C6E6D /* GameViewController.swift */; };
+		257C5CD626DF725F006C6E6D /* GameBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C5CD126DF725F006C6E6D /* GameBuilder.swift */; };
+		257C5CD726DF725F006C6E6D /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C5CD226DF725F006C6E6D /* GameInteractor.swift */; };
+		257C5CD826DF725F006C6E6D /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 257C5CD326DF725F006C6E6D /* GameViewController.xib */; };
+		257C5CDA26DF7918006C6E6D /* HomeComponent+Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C5CD926DF7917006C6E6D /* HomeComponent+Game.swift */; };
 		EDF74C375FE4AD0310D2D404 /* Pods_TryHardRIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418326963AE70D8BB9AAD611 /* Pods_TryHardRIBs.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +62,13 @@
 		257C5CC126DE7C0B006C6E6D /* HistoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryInteractor.swift; sourceTree = "<group>"; };
 		257C5CC226DE7C0B006C6E6D /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
 		257C5CC826DE85CE006C6E6D /* HomeComponent+History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeComponent+History.swift"; sourceTree = "<group>"; };
+		257C5CCC26DF3DF1006C6E6D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		257C5CCF26DF725F006C6E6D /* GameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouter.swift; sourceTree = "<group>"; };
+		257C5CD026DF725F006C6E6D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		257C5CD126DF725F006C6E6D /* GameBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBuilder.swift; sourceTree = "<group>"; };
+		257C5CD226DF725F006C6E6D /* GameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractor.swift; sourceTree = "<group>"; };
+		257C5CD326DF725F006C6E6D /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		257C5CD926DF7917006C6E6D /* HomeComponent+Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeComponent+Game.swift"; sourceTree = "<group>"; };
 		418326963AE70D8BB9AAD611 /* Pods_TryHardRIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TryHardRIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E2FD797DE5144BDEB937D89 /* Pods-TryHardRIBs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TryHardRIBs.release.xcconfig"; path = "Target Support Files/Pods-TryHardRIBs/Pods-TryHardRIBs.release.xcconfig"; sourceTree = "<group>"; };
 		FBD7BB5AF17E7744E4716495 /* Pods-TryHardRIBs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TryHardRIBs.debug.xcconfig"; path = "Target Support Files/Pods-TryHardRIBs/Pods-TryHardRIBs.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,9 +108,12 @@
 			isa = PBXGroup;
 			children = (
 				257C5CA626DE70A8006C6E6D /* App */,
+				257C5CCA26DF3DC0006C6E6D /* Model */,
+				257C5CCB26DF3DCB006C6E6D /* Cell */,
 				257C5CA926DE7267006C6E6D /* Root */,
 				257C5CB226DE74DF006C6E6D /* Home */,
 				257C5CBD26DE7BF3006C6E6D /* History */,
+				257C5CCE26DF7243006C6E6D /* Game */,
 			);
 			path = TryHardRIBs;
 			sourceTree = "<group>";
@@ -135,6 +152,7 @@
 				257C5CB626DE7506006C6E6D /* HomeInteractor.swift */,
 				257C5CB726DE7506006C6E6D /* HomeViewController.xib */,
 				257C5CC826DE85CE006C6E6D /* HomeComponent+History.swift */,
+				257C5CD926DF7917006C6E6D /* HomeComponent+Game.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -149,6 +167,33 @@
 				257C5CC226DE7C0B006C6E6D /* HistoryViewController.xib */,
 			);
 			path = History;
+			sourceTree = "<group>";
+		};
+		257C5CCA26DF3DC0006C6E6D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				257C5CCC26DF3DF1006C6E6D /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		257C5CCB26DF3DCB006C6E6D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		257C5CCE26DF7243006C6E6D /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				257C5CCF26DF725F006C6E6D /* GameRouter.swift */,
+				257C5CD026DF725F006C6E6D /* GameViewController.swift */,
+				257C5CD126DF725F006C6E6D /* GameBuilder.swift */,
+				257C5CD226DF725F006C6E6D /* GameInteractor.swift */,
+				257C5CD326DF725F006C6E6D /* GameViewController.xib */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 		4A5735402841A90DEC7FC691 /* Pods */ = {
@@ -229,6 +274,7 @@
 			files = (
 				257C5C9F26DE6F50006C6E6D /* LaunchScreen.storyboard in Resources */,
 				257C5C9C26DE6F50006C6E6D /* Assets.xcassets in Resources */,
+				257C5CD826DF725F006C6E6D /* GameViewController.xib in Resources */,
 				257C5C9A26DE6F4E006C6E6D /* Main.storyboard in Resources */,
 				257C5CC726DE7C0B006C6E6D /* HistoryViewController.xib in Resources */,
 				257C5CBC26DE7506006C6E6D /* HomeViewController.xib in Resources */,
@@ -284,16 +330,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				257C5CDA26DF7918006C6E6D /* HomeComponent+Game.swift in Sources */,
 				257C5CC526DE7C0B006C6E6D /* HistoryBuilder.swift in Sources */,
 				257C5CAF26DE72D5006C6E6D /* RootViewController.swift in Sources */,
 				257C5CC326DE7C0B006C6E6D /* HistoryRouter.swift in Sources */,
 				257C5CBB26DE7506006C6E6D /* HomeInteractor.swift in Sources */,
+				257C5CD426DF725F006C6E6D /* GameRouter.swift in Sources */,
+				257C5CD626DF725F006C6E6D /* GameBuilder.swift in Sources */,
 				257C5CAE26DE72D5006C6E6D /* RootRouter.swift in Sources */,
 				257C5CC426DE7C0B006C6E6D /* HistoryViewController.swift in Sources */,
 				257C5CBA26DE7506006C6E6D /* HomeBuilder.swift in Sources */,
+				257C5CD526DF725F006C6E6D /* GameViewController.swift in Sources */,
 				257C5CB126DE72D5006C6E6D /* RootInteractor.swift in Sources */,
 				257C5C9726DE6F4E006C6E6D /* ViewController.swift in Sources */,
+				257C5CD726DF725F006C6E6D /* GameInteractor.swift in Sources */,
 				257C5C9326DE6F4E006C6E6D /* AppDelegate.swift in Sources */,
+				257C5CCD26DF3DF1006C6E6D /* Model.swift in Sources */,
 				257C5CB926DE7506006C6E6D /* HomeViewController.swift in Sources */,
 				257C5CB826DE7506006C6E6D /* HomeRouter.swift in Sources */,
 				257C5CC626DE7C0B006C6E6D /* HistoryInteractor.swift in Sources */,
